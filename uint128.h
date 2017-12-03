@@ -9,19 +9,19 @@ struct __uint128
 	
 
 	__uint128(__int64 init_x64Var) 
-    {
+    	{
 		this->LowPart = init_x64Var;
 		this->HighPart = NULL;
-    }
+    	}
 	__uint128& operator=(__uint128 a)
-    {
+    	{
         LowPart = a.LowPart;
 		HighPart = a.HighPart;
         
         return *(__uint128*)this;
-    }
+    	}
 	__uint128 operator+(unsigned __int64 a) //limited to 64-Bits
-    {
+    	{
 		unsigned __int64 bitmask2;
 		unsigned __int64 bitmask1;
 		bitmask1 = bitmask2 = NULL;
@@ -96,14 +96,14 @@ struct __uint128
 		}
 
 		return *this;
-    }
+    	}
 	__uint128 operator+=(unsigned __int64 a)
 	{
 		*(__uint128*)this = *(__uint128*)this + a;
 		return *(__uint128*)this;
 	}
 	__uint128 operator-(unsigned __int64 a) //limited to 64-Bits
-    {
+    	{
 		unsigned __int64 bitmask1;
 		bitmask1 = NULL;
 
@@ -118,7 +118,7 @@ struct __uint128
 			BYTE SubBitBit = (a & bitmask1)==bitmask1;
 			BYTE CurrentBit = (LowPart & bitmask1)==bitmask1;
 			BYTE NewBit = CurrentBit;
-			if ( uebertrag == 1 ) //first the "übertrag"
+			if ( uebertrag == 1 ) //first the "Ã¼bertrag"
 			{
 				if ( NewBit == 1 )
 				{
@@ -155,7 +155,7 @@ struct __uint128
 			BYTE CurrentBit = (HighPart & bitmask1)==bitmask1;
 
 			BYTE NewBit = CurrentBit;
-			if ( uebertrag == 1 ) //first the "übertrag"
+			if ( uebertrag == 1 ) //first the "Ã¼bertrag"
 			{
 				if ( NewBit == 1 )
 				{
@@ -177,14 +177,14 @@ struct __uint128
 		}
 
 		return *this;
-    }
+    	}
 	__uint128 operator-=(unsigned __int64 a)
 	{
 		*(__uint128*)this = *(__uint128*)this - a;
 		return *(__uint128*)this;
 	}
 	__uint128 operator-(__uint128 a) 
-    {
+    	{
 		unsigned __int64 bitmask;
 		bitmask = NULL;
 		unsigned __int64 one = 1; //compiler converts that to a 32bit limited o.O
@@ -195,7 +195,7 @@ struct __uint128
 			BYTE SubBitBit = (a.LowPart & bitmask)==bitmask;
 			BYTE CurrentBit = (LowPart & bitmask)==bitmask;
 			BYTE NewBit = CurrentBit;
-			if ( uebertrag == 1 ) //first the "übertrag"
+			if ( uebertrag == 1 ) //first the "Ã¼bertrag"
 			{
 				if ( NewBit == 1 )
 				{
@@ -232,7 +232,7 @@ struct __uint128
 			BYTE SubBitBit = (a.HighPart & bitmask)==bitmask;
 			BYTE CurrentBit = (HighPart & bitmask)==bitmask;
 			BYTE NewBit = CurrentBit;
-			if ( uebertrag == 1 ) //first the "übertrag"
+			if ( uebertrag == 1 ) //first the "Ã¼bertrag"
 			{
 				if ( NewBit == 1 )
 				{
@@ -270,7 +270,7 @@ struct __uint128
 		return *(__uint128*)this;
 	}
 	__uint128 operator+(__uint128 a) 
-    {
+    	{
 		unsigned __int64 bitmask;
 		bitmask = NULL;
 		unsigned __int64 one = 1; //compiler converts that to a 32bit limited o.O
@@ -340,7 +340,7 @@ struct __uint128
 			}
 		}
 		return *this;
-    }
+    	}
 	__uint128 operator+=(__uint128 a)
 	{
 		*(__uint128*)this = *(__uint128*)this - a;
