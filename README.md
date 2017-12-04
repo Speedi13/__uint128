@@ -2,3 +2,13 @@
 unsigned 128Bit Integer
 
 I made this just for fun :D
+
+Available Operators:  
+				•)	=  
+				•)	+  
+				•)	+=  
+    		•)	-  
+    		•)	-=  
+    		•)	==  
+    		•)	!=  
+  
